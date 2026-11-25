@@ -1,16 +1,23 @@
-# 嘎嘎AI视频提取 · macOS 分享版
+# 嘎嘎AI视频提取 · Mac 分享版
 
-将抖音、小红书和网页视频转为文稿，可选 AI 整理，支持保存到 Obsidian 或飞书。
+[下载最新版完整安装包](https://github.com/xugaga123/gaga-ai-video-extractor-downloads/releases/latest)
 
-[下载最新版 macOS 安装包](https://github.com/xugaga123/gaga-ai-video-extractor-downloads/releases/latest)
+## 选择下载
 
-1. 在下载页面选择以 `.zip` 结尾的 macOS 安装包，完整解压。
-2. 先阅读包内“先看这里-使用手册.html”，再双击“安装.command”。
-3. 按提示准备 Chrome、[Node.js 24 或更新版本](https://nodejs.org/en/download)与 [FFmpeg](https://ffmpeg.org/download.html)，在 Chrome 中加载安装脚本打开的 extension 文件夹。
-4. 首次输入提供给你的插件邀请码，然后配置自己的视频转写 API；需要 AI 整理时再填写自己的 AI API。
+- **M 系列 Mac（M1及更新芯片）**：下载最新版完整 ZIP，已含 Node.js、FFmpeg 和本地助手，无需额外准备环境；需要 macOS13.5+ 和 Chrome。
+- **Intel 老款 Mac**：使用 [v0.8.1 轻量包](https://github.com/xugaga123/gaga-ai-video-extractor-downloads/releases/tag/v0.8.1)，按其手册安装 Node.js 与 FFmpeg。
 
-这是解压后运行脚本、手动加载 Chrome 扩展的安装方式；安装包不是签名的 DMG。若 macOS 阻止打开，请在“系统设置 → 隐私与安全性”中允许打开后重试。
+## 完整包使用
 
-AI 规则支持下拉切换、编辑和新增，保存在自己的浏览器中。视频下载跟随输出方式：仅插件显示到电脑，Obsidian 到笔记目录，飞书到自己的表格。
+1. 完整解压 ZIP，双击「安装.command」。助手和运行环境会配置到本应用目录，并设置登录电脑后自动启动，不修改电脑已有环境。
+2. 按提示在 Chrome 扩展程序页开启开发者模式，加载安装脚本打开的 extension 文件夹。
+3. 填写提供给你的邀请码，设置自己的转写 API；需要 AI 整理时填写自己的 AI API。
+4. 先测试连接，再用一条短视频提取、整理和保存。
 
-此仓库仅提供 macOS 分享版安装包和使用说明。每次发布附带 SHA256 校验文件，历史附件不会覆盖。安装包为手动更新。
+这是脚本安装并手动加载 Chrome 扩展的方式。暂未做开发者签名或苹果公证；macOS 首次可能要求在「隐私与安全性」中允许打开，程序不能代替使用者确认。失败请保留窗口中的报错。
+
+AI 规则支持下拉切换、编辑和新增，保存在自己的浏览器中。可保存到 Obsidian、飞书或仅插件显示；视频保存位置跟随文稿输出方式。
+
+此仓库只提供安装包与使用说明。下载 Release 中的完整 ZIP 即可，GitHub 自动生成的 Source code 不是安装包。每版附 SHA256，历史安装包保留；当前为手动更新。
+
+第三方许可：完整包使用 Node.js（MIT及附带第三方许可），独立运行的 [FFmpeg](https://ffmpeg.org/)（LGPL2.1或更新）及 LAME（LGPL）。对应许可、FFmpeg/LAME源码与构建方法均在完整ZIP内提供。
